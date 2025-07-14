@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -58,7 +59,9 @@
             border-radius: 8px;
         }
 
-        .close-btn, .prev-btn, .next-btn {
+        .close-btn,
+        .prev-btn,
+        .next-btn {
             position: absolute;
             color: white;
             font-size: 30px;
@@ -92,12 +95,15 @@
                 height: 150px;
             }
 
-            .close-btn, .prev-btn, .next-btn {
+            .close-btn,
+            .prev-btn,
+            .next-btn {
                 font-size: 24px;
             }
         }
     </style>
 </head>
+
 <body>
     <div class="gallery">
         <!-- Images will be dynamically added here -->
@@ -114,11 +120,20 @@
         // Array of image URLs (replace with your own image URLs)
         const images = [
             'https://img.freepik.com/free-photo/beautiful-domestic-cat-laying-fence_181624-43207.jpg',
-            'https://img.freepik.com/free-photo/close-up-adorable-kitten-outdoors_23-2150782407.jpg',
+            '	https://img.freepik.com/free-photo/close-up-adorable-kitten-outdoors_23-2150782407.jpg',
             'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850004.jpg',
             'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850044.jpg',
             'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850006.jpg',
-            'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850043.jpg'
+            'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151850043.jpg',
+            'https://img.freepik.com/free-photo/adorable-portrait-pet-surrounded-by-flowers_23-2151849997.jpg',
+            'https://img.freepik.com/free-photo/view-cats-dogs-showing-friendship_23-2151806281.jpg',
+            'https://img.freepik.com/free-photo/view-cats-dogs-being-friends_23-2151806355.jpg',
+            'https://img.freepik.com/free-photo/view-cats-dogs-being-friends_23-2151806350.jpg',
+            '	https://img.freepik.com/free-photo/view-cats-dogs-being-friends_23-2151806331.jpg',
+            'https://img.freepik.com/free-photo/closeup-scarlet…e-view-scarlet-macaw-closeup-head_488145-3540.jpg',
+            'https://img.freepik.com/free-photo/european-hedgehog-hands-natural-garden-habitat_1150-18214.jpg',
+            'https://img.freepik.com/premium-photo/loving-pair-…-melopsittacus-undulatus-isolated_1069399-659.jpg',
+            'https://img.freepik.com/premium-photo/colorful-rai…urrounded-by-fluffy-white-clouds_1386465-5686.jpg'
         ];
 
         const gallery = document.querySelector('.gallery');
@@ -128,7 +143,7 @@
         images.forEach((src, index) => {
             const img = document.createElement('img');
             img.src = src;
-            img.alt = 'Image ${index + 1}';
+            img.alt = `Image ${index + 1}`;
             img.onclick = () => openLightbox(index);
             gallery.appendChild(img);
         });
@@ -177,4 +192,5 @@
         });
     </script>
 </body>
+
 </html>
